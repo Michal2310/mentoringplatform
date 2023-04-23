@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "skill": "node.js"
+  },
+  {
+    "id": 2,
+    "skill": "react"
+  },
+  {
+    "id": 3,
+    "skill": "database"
+  }
+]

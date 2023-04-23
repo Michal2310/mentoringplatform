@@ -1,0 +1,36 @@
+{
+  "status": "success",
+  "isLoading": false,
+  "isSuccess": true,
+  "isError": false,
+  "isIdle": false,
+  "data": [
+    {
+      "id": 3,
+      "background": "My coding background is...",
+      "expectations": "My expectations are...",
+      "message": "I really want to be teached by you",
+      "status": "Pending",
+      "senderId": 3,
+      "mentorId": 6,
+      "createdAt": "2023-01-23T16:06:43.480Z",
+      "user": {
+        "email": "john.b@wp.pl"
+      }
+    }
+  ],
+  "dataUpdatedAt": 1682089523997,
+  "error": null,
+  "errorUpdatedAt": 0,
+  "failureCount": 0,
+  "errorUpdateCount": 0,
+  "isFetched": true,
+  "isFetchedAfterMount": true,
+  "isFetching": false,
+  "isRefetching": false,
+  "isLoadingError": false,
+  "isPlaceholderData": false,
+  "isPreviousData": false,
+  "isRefetchError": false,
+  "isStale": true
+}

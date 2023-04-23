@@ -1,0 +1,133 @@
+.loginFormContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 8rem auto;
+  max-height: 100vh;
+  width: 80vw;
+}
+.loginFormContainerText {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.loginFormContainerTextParagraph {
+  color: #8d8d8d;
+}
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.loginFormItem {
+  width: 70vw;
+}
+.loginFormItem:first-child {
+  margin-bottom: 1.5rem;
+}
+.loginRecoveryBox {
+  width: 70vw;
+  text-align: right;
+}
+
+.login__submit {
+  margin-top: 2rem;
+  width: 100%;
+}
+.loginFormSubmit {
+  background-color: #17a3ff;
+  padding: 1rem;
+  border: none;
+  border-radius: 15px;
+  color: white;
+  font-size: 22px;
+  width: 70vw;
+  margin-top: 2rem;
+  cursor: pointer;
+}
+.loginRegisterBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.loginRegisterLink {
+  color: #17a3ff;
+  background-color: transparent;
+  width: fit-content;
+  font-size: 16px;
+  padding-left: 0.3rem;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+.loginFormInput {
+  background-color: #172231;
+  border-radius: 15px;
+  color: white;
+  padding: 1rem;
+  font-size: 20px;
+  width: 100%;
+  border: transparent;
+  outline: none;
+}
+.loginFormInput::placeholder {
+  color: #8d8d8d;
+}
+.inputError {
+  border: 2px solid red !important;
+}
+.loginImageContainer {
+  display: none;
+}
+.loginRecoveryLink {
+  text-decoration: none;
+  background-color: transparent;
+  border: none;
+  text-align: center;
+  color: #a7a1a1;
+  font-size: 14px;
+  cursor: pointer;
+}
+@media screen and (min-width: 1024px) {
+  .loginContainer {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+  }
+  .loginImageContainer {
+    width: 50vw;
+    height: 100vh;
+    background-color: #03152c;
+    display: flex;
+    flex-direction: column;
+    padding: 10rem;
+    align-items: center;
+  }
+  .loginImage {
+    width: 25vw;
+    height: auto;
+  }
+  .loginImageHeader {
+    padding: 3rem 0;
+  }
+  .loginFormContainer {
+    width: 50vw;
+    justify-content: center;
+  }
+  .loginFormItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30vw;
+  }
+  .loginFormInput {
+    width: 100%;
+  }
+
+  .loginFormSubmit {
+    max-width: 30vw;
+  }
+  .loginRecoveryBox {
+    width: 30vw;
+  }
+}

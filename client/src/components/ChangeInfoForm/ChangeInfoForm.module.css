@@ -1,0 +1,80 @@
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: max-content;
+  margin: 8rem auto;
+}
+
+.infoContainer h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.infoContainer form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 80%;
+}
+
+.formItem {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.formItem input {
+  background-color: #172231;
+  border-radius: 15px;
+  color: white;
+  padding: 1rem;
+  font-size: 20px;
+  width: 100%;
+  height: 3rem;
+  border: transparent;
+  outline: none;
+}
+
+.formItem textarea {
+  height: 6ch;
+  width: 100%;
+  resize: none;
+  background-color: #172231;
+  border-radius: 15px;
+  color: white;
+  padding: 0.4rem;
+  font-size: 20px;
+  border: transparent;
+  outline: none;
+}
+
+.label {
+  align-self: flex-start;
+  margin-bottom: 0.5rem;
+  font-size: 18px;
+}
+
+.formSubmit {
+  background-color: #2d517e;
+  color: white;
+  border: transparent;
+  border-radius: 15px;
+  padding: 0.4rem 0.6rem;
+  transition: ease-in-out 0.3s;
+  cursor: pointer;
+  margin: 0.2rem 0.1rem;
+  width: 100%;
+  font-size: 22px;
+}
+
+.inputError {
+  border: 2px solid red !important;
+}
+
+@media screen and (min-width: 1024px) {
+  .infoContainer {
+    width: 60vw;
+  }
+}

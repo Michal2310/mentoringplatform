@@ -1,0 +1,42 @@
+.mentorForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.mentorFormSubmit {
+  background-color: #17a3ff;
+  padding: 0.4rem;
+  border: none;
+  border-radius: 15px;
+  color: white;
+  font-size: 18px;
+  width: 100%;
+  cursor: pointer;
+}
+.inputError {
+  border: 2px solid red;
+}
+.mentorFormItem {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+.mentorFormItemTextarea {
+  height: 6ch;
+  width: 100%;
+  resize: none;
+  background-color: #172231;
+  border-radius: 15px;
+  color: white;
+  padding: 0.4rem;
+  font-size: 20px;
+  border: transparent;
+  outline: none;
+}
+.mentorFormItemLabel {
+  align-self: flex-start;
+  margin-bottom: 0.5rem;
+  font-size: 18px;
+}

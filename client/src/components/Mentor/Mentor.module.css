@@ -1,0 +1,87 @@
+.mentorContainerItem {
+  background-color: #03152c;
+  border-radius: 0.8rem;
+  padding: 1rem 1.5rem;
+  margin: 8rem 1rem;
+}
+.mentorItemProfile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.starButton {
+  background-color: transparent;
+  border: none;
+  color: gold;
+}
+.mentor__profile__image {
+  background-color: #2d517e;
+  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+  position: absolute;
+  left: calc(50% - 3rem);
+  top: -3.5rem;
+}
+.mentorButton {
+  text-align: right;
+  padding-top: 0.5rem;
+}
+.mentorButtonLink {
+  background-color: #2d517e;
+  color: white;
+  border-radius: 0.8rem;
+  padding: 0.4rem 0.7rem;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.mentorButtonLink:hover {
+  background-color: #132b47;
+}
+
+.mentorItemProfileInformation {
+  display: flex;
+  align-items: center;
+  padding: 0.7rem 0;
+}
+.mentorItemProfileInformationText {
+  padding-left: 0.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 4;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  text-align: left;
+}
+.textCapitalize {
+  text-transform: capitalize;
+}
+
+@media screen and (min-width: 1024px) {
+  .mentorContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .mentorContainerItem {
+    display: flex;
+    flex-direction: column;
+    width: 45vw;
+  }
+  .mentorButton {
+    margin-top: auto;
+    text-align: right;
+  }
+  .mentorButtonLink {
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.4s;
+  }
+
+  .mentorButtonLink:hover {
+    background-color: #132b47;
+    transform: scale(1.08);
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.4s;
+  }
+}

@@ -1,0 +1,21 @@
+import { jsx as _jsx, jsxs as _jsxs, Fragment as _Fragment } from "react/jsx-runtime";
+import { useContext, useState } from "react";
+import { useParams } from "react-router";
+import { AuthContext } from "../../context/authContext";
+import StarBorderIcon from "@mui/icons-material/StarBorder";
+import PermIdentityIcon from "@mui/icons-material/PermIdentity";
+import ConstructionIcon from "@mui/icons-material/Construction";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
+import InfoIcon from "@mui/icons-material/Info";
+import StarIcon from "@mui/icons-material/Star";
+import styles from "./SingleMentor.module.css";
+import useModal from "../../hooks/useModal";
+import SingleMentorModal from "../SingleMentorModal/SingleMentorModal";
+const SingleMentor = ({ data }) => {
+    const { isOpen, toggle } = useModal();
+    const [starState, setStarState] = useState(false);
+    const { mentorId } = useParams();
+    const { user } = useContext(AuthContext);
+    return (_jsx(_Fragment, { children: data && (_jsxs("div", { className: styles.mentorContainer, "data-testid": "mentor", children: [_jsxs("div", { className: styles.mentorProfile, children: [_jsxs("div", { className: styles.mentorInformation, children: [_jsx(LocationOnIcon, {}), _jsx("p", { "data-cy": "country", className: `${styles.mentorInformationParagraph} ${styles.textCapitalize}`, children: data.country[0].country })] }), _jsx("img", { className: styles.mentorImage, src: data.image[0].fileUrl }), _jsx("button", { className: styles.starButton, onClick: () => setStarState((prev) => !prev), "data-testid": "starButton", children: starState ? (_jsx(StarIcon, { "data-testid": "starIcon" })) : (_jsx(StarBorderIcon, { "data-testid": "borderStarIcon" })) })] }), _jsxs("div", { children: [_jsxs("div", { className: styles.mentorInformation, children: [_jsx(PermIdentityIcon, {}), _jsx("p", { className: styles.mentorInformationParagraph, "data-cy": "firstname", children: data.firstname })] }), _jsxs("div", { className: styles.mentorInformation, children: [_jsx(InfoIcon, {}), _jsxs("p", { className: styles.mentorInformationParagraph, "data-cy": "about", children: ["Bio: ", data.about] })] }), _jsxs("div", { className: styles.mentorInformation, children: [_jsx(ConstructionIcon, {}), _jsx("p", { className: `${styles.mentorInformationParagraph} ${styles.textCapitalize}`, "data-cy": "skills", children: data?.skills.map((el) => el.skill).join(", ") })] })] }), user?.id && (_jsxs("div", { className: styles.mentorButtons, children: [_jsx("button", { className: styles.mentorButton, onClick: toggle, children: "Apply for mentorship" }), _jsx(SingleMentorModal, { mentorId: Number(mentorId), isOpen: isOpen, toggle: toggle })] }))] }, data.email)) }));
+};
+export default SingleMentor;

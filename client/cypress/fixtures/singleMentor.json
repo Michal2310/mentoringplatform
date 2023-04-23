@@ -1,0 +1,29 @@
+{
+  "id": 1,
+  "email": "janek@wp.pl",
+  "about": "I'm Jnaek",
+  "firstname": "janek",
+  "country": [
+    {
+      "id": 1,
+      "country": "poland"
+    }
+  ],
+  "languages": [
+    {
+      "id": 1,
+      "language": "polish"
+    }
+  ],
+  "skills": [
+    {
+      "id": 1,
+      "skill": "nodejs"
+    }
+  ],
+  "image": [
+    {
+      "fileUrl": ""
+    }
+  ]
+}

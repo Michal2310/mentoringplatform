@@ -1,0 +1,103 @@
+.mentorshipsContainer {
+  background-color: #03152c;
+  border-radius: 0.8rem;
+  padding: 1rem 1.5rem;
+  margin: -5rem 1rem 8rem 1rem;
+}
+.mentorshipContainer {
+  background-color: #0b2342;
+  border-radius: 0.8rem;
+  padding: 0.2rem 0.2rem 0.1rem 0.6rem;
+  display: flex;
+  margin: 1.5rem 0;
+}
+.mentorshipInfo {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  flex: 1;
+  padding: 0 0 0 0.1rem;
+}
+.mentorshipInfoParagraph {
+  font-size: 14px;
+  width: 20ch;
+  padding: 0.2rem 0;
+  padding-left: 0.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+.mentorshipButtons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: end;
+  flex: 1;
+  gap: 0.3rem;
+  padding-right: 0.1rem;
+}
+.mentorshipStatus {
+  font-size: 12px;
+}
+.mentorshipStatus {
+  background-color: #17a3ff;
+  padding: 0.2rem 0.6rem;
+  width: fit-content;
+  border-radius: 15px;
+}
+.mentorshipButton {
+  background-color: #2d517e;
+  color: white;
+  border: transparent;
+  border-radius: 15px;
+  padding: 0.2rem 0.6rem;
+  transition: ease-in-out 0.3s;
+  cursor: pointer;
+  margin: 0.2rem 0.1rem;
+  width: 100%;
+}
+.mentorshipStatus {
+  transform: scale(1.1);
+  transition: ease-in-out 0.3s;
+}
+.mentorshipLinkBox {
+  text-align: right;
+}
+.mentorshipLink {
+  background-color: transparent;
+  border: none;
+  color: #316282;
+  font-size: 18px;
+  cursor: pointer;
+  transition: ease-in-out 0.3s;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 1024px) {
+  .mentorshipsContainer {
+    max-width: 70vw;
+    margin: -5rem auto 8rem auto;
+  }
+  .mentorshipContainer {
+    width: 45%;
+  }
+  .mentorshipButton {
+    width: max-content;
+  }
+  .mentorshipsContainerItem {
+    display: flex;
+    justify-content: space-around;
+  }
+  .mentorshipInfo {
+    width: 60%;
+  }
+  .mentorshipInfoParagraph {
+    width: 100%;
+  }
+  .mentorshipLink:hover {
+    transform: scale(1.05);
+    transition: ease-in-out 0.3s;
+  }
+}

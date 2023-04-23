@@ -1,0 +1,62 @@
+.mentorContainer {
+  background-color: #03152c;
+  border-radius: 0.8rem;
+  padding: 1rem 1.5rem;
+  margin: 8rem 1rem;
+  font-size: 1.2rem;
+}
+.mentorProfile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.starButton {
+  background-color: transparent;
+  border: none;
+  color: gold;
+}
+.mentorImage {
+  background-color: #2d517e;
+  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+  position: absolute;
+  left: calc(50% - 3rem);
+  top: -3.5rem;
+}
+.mentorButtons {
+  text-align: right;
+}
+.mentorButton {
+  background-color: #2d517e;
+  text-align: center;
+  border-radius: 15px;
+  padding: 0.4rem 0.6rem;
+  color: white;
+  border: none;
+  font-size: 1.2rem;
+  margin: 2rem 0 0 0;
+}
+
+.mentorInformation {
+  display: flex;
+  align-items: center;
+  padding: 0.7rem 0;
+}
+.mentorInformationParagraph {
+  padding-left: 0.5rem;
+}
+.textCapitalize {
+  text-transform: capitalize;
+}
+
+@media screen and (min-width: 1024px) {
+  .mentorContainer {
+    width: 70vw;
+    margin: 8rem auto;
+  }
+  .mentorInformation {
+    align-items: center;
+  }
+}

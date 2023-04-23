@@ -1,0 +1,143 @@
+.navbarContainer {
+  position: relative;
+  top: -7rem;
+  right: 0rem;
+}
+
+.navbarButtonBox {
+  position: absolute;
+  top: 0rem;
+  right: 4rem;
+  z-index: 101;
+}
+
+.navbarButton {
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  border: none;
+  transform-origin: center;
+  transition: 0.3s;
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 50%;
+}
+
+.navbarButton::after {
+  position: absolute;
+  content: "";
+  width: 6px;
+  height: 6px;
+  background: #03152c;
+  display: block;
+  left: calc(50% - 3px);
+  top: calc(50% - 3px);
+  box-shadow: -10px 0 0 #03152c, 10px 0 0 #03152c, -10px -10px 0 #03152c, 0 -10px 0 #03152c,
+    10px -10px 0 #03152c, -10px 10px 0 #03152c, 0 10px 0 #03152c, 10px 10px 0 #03152c;
+}
+.navbarButton::before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 3px;
+  left: 23px;
+  top: 15px;
+  background: #fff;
+}
+.navbarActiveButton {
+  background: #03152c;
+  border-radius: 25px;
+  transform: rotate(45deg);
+}
+.navbarActiveButton::after {
+  box-shadow: none;
+  width: 20px;
+  height: 3px;
+  left: 15px;
+  top: 24px;
+  background: #fff;
+}
+.navbarModal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  min-height: 100vh;
+  min-width: 100vw;
+  background-color: #020f1f;
+  z-index: 100;
+  overflow-y: auto;
+  padding-top: 10rem;
+}
+
+.navbarModalImage {
+  background-color: #2d517e;
+  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+}
+.navbarModalItems {
+  display: flex;
+  flex-direction: column;
+}
+.navbarModalItem {
+  text-decoration: none;
+  background-color: #17a3ff;
+  padding: 1rem;
+  border: none;
+  border-radius: 15px;
+  color: white;
+  font-size: 22px;
+  width: 40vw;
+  margin-top: 2rem;
+  cursor: pointer;
+  text-align: center;
+}
+
+@media screen and (min-width: 1024px) {
+  .navbarContainer {
+    position: unset;
+  }
+  .navbarButtonBox {
+    margin: 0;
+    padding: 0;
+    display: none;
+  }
+  .navbarModalImage {
+    margin: 0;
+    padding: 0;
+    display: none;
+  }
+  .navbarModal {
+    background-color: #030e1c;
+    padding: 0;
+    min-height: 0;
+    min-height: 8vh;
+    min-width: 100vw;
+    z-index: 10000;
+  }
+
+  .navbarModalItems {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    min-height: 8vh;
+    min-width: 100vw;
+  }
+  .navbarModalItem {
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    border-radius: 15px;
+    color: white;
+    width: fit-content;
+    margin: 0;
+    padding: 0;
+  }
+}

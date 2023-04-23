@@ -1,0 +1,50 @@
+{
+  "id": 1,
+  "firstname": "John",
+  "lastname": "Blake",
+  "email": "mail2@host.com",
+  "about": "My name is John",
+  "title": "Developer",
+  "country": [
+    {
+      "id": 1,
+      "country": "poland"
+    }
+  ],
+  "languages": [
+    {
+      "id": 1,
+      "language": "polish"
+    },
+    {
+      "id": 2,
+      "language": "english"
+    }
+  ],
+  "skills": [
+    {
+      "id": 1,
+      "skill": "nodejs"
+    },
+    {
+      "id": 2,
+      "skill": "databases"
+    },
+    {
+      "id": 3,
+      "skill": "react"
+    }
+  ],
+  "image": [
+    {
+      "id": 1,
+      "fileName": "st,small,507x507-pad,600x600,f8f8f8.jpg",
+      "fileUrl": "https://www.gravatar.com/avatar/9f872d065fd87f8b047a90d56abab8d1?d=identicon",
+      "key": "be04783c13cb1725-st,small,507x507-pad,600x600,f8f8f8.jpg",
+      "createdAt": "2022-11-10T11:37:00.939Z",
+      "updatedAt": "2023-04-03T16:50:31.624Z",
+      "userId": 1
+    }
+  ],
+  "isMentor": true
+}

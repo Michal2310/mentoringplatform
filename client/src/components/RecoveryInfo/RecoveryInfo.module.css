@@ -1,0 +1,61 @@
+.infoContainer {
+  width: 80vw;
+  margin: 0;
+  padding: 0;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  overflow: hidden !important;
+}
+.infoTextBoxParagraph,
+.infoTextBoxHeader {
+  text-align: center;
+}
+.infoTextBoxHeader {
+  font-size: 1.6rem;
+}
+.infoTextBoxParagraph {
+  font-size: 1.2rem;
+}
+.infoButton {
+  background-color: #17a3ff;
+  padding: 1rem;
+  border: none;
+  border-radius: 15px;
+  color: white;
+  font-size: 22px;
+  width: 70vw;
+  margin-top: 2rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+@media screen and (min-width: 1024px) {
+  .infoContainer {
+    width: 30vw;
+    margin: 0 auto;
+    padding: 0;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    overflow: hidden !important;
+  }
+  .infoTextBox {
+    text-align: center;
+  }
+  .infoButton {
+    background-color: #17a3ff;
+    padding: 1rem;
+    border: none;
+    border-radius: 15px;
+    color: white;
+    font-size: 22px;
+    width: 70vw;
+    margin-top: 2rem;
+    cursor: pointer;
+    text-decoration: none;
+  }
+}

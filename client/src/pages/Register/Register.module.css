@@ -1,0 +1,116 @@
+.registerFormContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 8rem auto;
+  max-height: 100vh;
+  width: 80vw;
+}
+.registerFormContainerText {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.registerFormContainerTextParagraph {
+  color: #8d8d8d;
+}
+.registerForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.registerFormItem {
+  margin-bottom: 1.5rem;
+  width: 70vw;
+}
+.loginBox {
+  margin-top: 2rem;
+  width: 100%;
+}
+.registerFormSubmit {
+  background-color: #17a3ff;
+  padding: 1rem;
+  border: none;
+  border-radius: 15px;
+  color: white;
+  font-size: 22px;
+  width: 70vw;
+  margin-top: 2rem;
+  cursor: pointer;
+}
+.registerFormSubmit:disabled {
+  background-color: #010b17;
+  cursor: not-allowed;
+}
+.loginBoxItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.loginBoxItemLink {
+  color: #17a3ff;
+  background-color: transparent;
+  width: fit-content;
+  font-size: 16px;
+  padding-left: 0.3rem;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+.registerFormInput {
+  background-color: #172231;
+  border-radius: 15px;
+  color: white;
+  padding: 1rem;
+  font-size: 20px;
+  width: 100%;
+  border: transparent;
+  outline: none;
+}
+.inputError {
+  border: 2px solid red !important;
+}
+.registerImageContainer {
+  display: none;
+}
+@media screen and (min-width: 1024px) {
+  .registerContainer {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+  }
+  .registerImageContainer {
+    width: 50vw;
+    height: 100vh;
+    background-color: #03152c;
+    display: flex;
+    flex-direction: column;
+    padding: 10rem;
+    align-items: center;
+  }
+  .registerImage {
+    width: 25vw;
+    height: auto;
+  }
+  .registerImageHeader {
+    padding: 3rem 0;
+  }
+  .registerFormContainer {
+    width: 50vw;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  .registerFormItem {
+    margin-bottom: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 30vw;
+  }
+  .registerFormInput {
+    width: 100%;
+  }
+  .registerFormSubmit {
+    max-width: 30vw;
+  }
+}

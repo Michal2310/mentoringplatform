@@ -1,0 +1,16 @@
+.fromError {
+  margin: 0;
+  padding: 0;
+  color: red;
+  display: flex;
+  align-items: center;
+}
+.fromErrorIcon {
+  padding-right: 0.5rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .fromError {
+    margin-right: auto;
+  }
+}

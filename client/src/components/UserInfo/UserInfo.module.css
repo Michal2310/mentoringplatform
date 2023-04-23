@@ -1,0 +1,41 @@
+.infoContainer {
+  background-color: #03152c;
+  border-radius: 0.8rem;
+  padding: 1rem 1.5rem;
+  margin: 8rem 1rem;
+}
+.infoHeader,
+.infoIcon {
+  display: flex;
+  align-items: center;
+  padding: 0.7rem 0;
+}
+.infoIconParagraph {
+  padding-left: 0.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 10;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+.textCapitalize {
+  text-transform: capitalize;
+}
+.infoChangeBox {
+  text-align: right;
+  margin-top: 0.5rem;
+}
+.infoChangeBoxButton {
+  background-color: transparent;
+  border: none;
+  color: #316282;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 1024px) {
+  .infoContainer {
+    max-width: 70vw;
+    margin: 8rem auto;
+  }
+}
