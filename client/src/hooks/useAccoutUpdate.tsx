@@ -30,6 +30,7 @@ export const useAccountUpdate = () => {
   const [checkedSkills, setCheckedSkills] = useState({});
   const [checkedLanguages, setCheckedLanguages] = useState({});
   const [checkedCountry, setCheckedCountry] = useState({});
+  const [isUpdating, setIsUpdating] = useState<boolean>(false);
 
   const {
     "0": { data: skills },
@@ -70,11 +71,13 @@ export const useAccountUpdate = () => {
   });
 
   const onSubmit = async (FormData: FormData) => {
+    setIsUpdating(true);
     const res = (await mutateAsync(FormData)) as User;
     setUser((prev) => ({
       ...prev,
       ...res,
     }));
+    setIsUpdating(false);
   };
 
   return {
@@ -88,5 +91,7 @@ export const useAccountUpdate = () => {
     skills,
     languages,
     country,
+    isUpdating,
+    setIsUpdating,
   };
 };

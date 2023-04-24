@@ -2,7 +2,7 @@
   background-color: #03152c;
   border-radius: 0.8rem;
   padding: 1rem 1.5rem;
-  margin: 8rem 1rem;
+  margin: 8rem 1rem 0 1rem;
 }
 .mentorItemProfile {
   display: flex;
@@ -15,7 +15,7 @@
   border: none;
   color: gold;
 }
-.mentor__profile__image {
+.mentorProfileImage {
   background-color: #2d517e;
   border-radius: 50%;
   width: 5rem;
@@ -62,14 +62,15 @@
 
 @media screen and (min-width: 1024px) {
   .mentorContainer {
-    display: flex;
+    display: grid;
     flex-direction: row;
     justify-content: space-around;
+    grid-template-columns: repeat(3, 1fr);
   }
   .mentorContainerItem {
     display: flex;
     flex-direction: column;
-    width: 45vw;
+    width: 30vw;
   }
   .mentorButton {
     margin-top: auto;

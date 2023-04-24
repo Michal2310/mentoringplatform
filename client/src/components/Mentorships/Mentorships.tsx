@@ -3,6 +3,7 @@ import { Mentorship } from "../UserMentorships/UserMentorships";
 import useModal from "../../hooks/useModal";
 import MentorshipModal from "../MentorshipModal/MentorshipModal";
 import styles from "./Mentorships.module.css";
+import MentorshipsSkeleton from "../MentorshipsSkeleton/MentorshipsSkeleton";
 
 interface MentorshipProps {
   header: string;
@@ -15,11 +16,21 @@ const Mentorships = ({ data, isLoading, header }: MentorshipProps) => {
   const showButtons = header === "Mentorship requests" && selectedItem?.status === "Pending";
   return (
     <>
-      {!isLoading && (
+      {isLoading ? (
+        <div className={styles.mentorshipsContainer}>
+          <h2>{header}</h2>
+          {Array.from({ length: 3 }).map((_, index) => (
+            <MentorshipsSkeleton />
+          ))}
+        </div>
+      ) : (
         <div className={styles.mentorshipsContainer} data-testid="mentorships">
           <h2>{header}</h2>
           {data.map((el) => (
-            <div className={styles.mentorshipsItem} key={el.message}>
+            <div
+              className={`${styles.mentorshipsItem} ${styles.mentorshipsItemBackground}`}
+              key={el.message}
+            >
               <div className={styles.mentorshipsItemInformation}>
                 <p className={styles.mentorshipsItemInformationText} data-cy="email">
                   Email: {el.user.email ?? ""}

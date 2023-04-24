@@ -1,0 +1,36 @@
+.skeletonContainer {
+  width: 90vw;
+  position: relative;
+}
+.skeletonImage {
+  position: absolute;
+  left: calc(50% - 5rem);
+  top: -3.5rem;
+}
+.skeletonInfo {
+  padding: 0.7rem 0;
+  width: 90%;
+}
+.skeletonButton {
+  text-align: right;
+}
+
+@media screen and (min-width: 1024px) {
+  .skeletonContainer {
+    height: 40vh;
+    width: 30vw;
+    position: relative;
+  }
+  .skeletonImage {
+    position: absolute;
+    left: calc(50% - 5rem);
+    top: -3.5rem;
+  }
+  .skeletonInfo {
+    padding: 0.7rem 0;
+    width: 90%;
+  }
+  .skeletonButton {
+    text-align: right;
+  }
+}

@@ -15,11 +15,16 @@ const UpdateUserInfo = () => {
     country,
     languages,
     onSubmit,
+    isUpdating,
   } = useAccountUpdate();
 
   return (
     <>
-      <ChangeInfoForm onSubmit={onSubmit} header="Change your account information">
+      <ChangeInfoForm
+        onSubmit={onSubmit}
+        isUpdating={isUpdating}
+        header="Change your account information"
+      >
         <DropdownMenu<Skill, Record<string, boolean>>
           itemKey={"skill"}
           dataArray={skills}
