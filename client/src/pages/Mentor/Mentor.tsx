@@ -28,13 +28,13 @@ export type SingleMentorType = {
 const Mentor = () => {
   const fetchData = useApi<SingleMentorType>();
   const { mentorId } = useParams();
-  const { data } = useQuery({
+  const { data, isLoading } = useQuery({
     queryKey: ["mentor", mentorId],
     queryFn: async () => await fetchData(`/api/mentor/${mentorId}`, "get", false),
   });
   return (
     <>
-      <SingleMentor data={data} />
+      <SingleMentor data={data} isLoading={isLoading} />
     </>
   );
 };
