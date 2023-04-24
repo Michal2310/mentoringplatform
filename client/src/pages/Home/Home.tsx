@@ -43,6 +43,7 @@ const Home = () => {
         },
       }),
   });
+  console.log(data);
   return (
     <>
       <Mentor data={data} />
