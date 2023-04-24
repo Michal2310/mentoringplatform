@@ -15,58 +15,61 @@ import UpdateUserInfo from "./pages/ChangeInfo/UpdateUserInfo";
 import AccountMentorships from "./pages/AccountMentorships/AccountMentorships";
 import BecomeMentor from "./pages/BecomeMentor/BecomeMentor";
 import RecoveryPassword from "./pages/RecoveryPassword/RecoveryPassword";
+import { SkeletonTheme } from "react-loading-skeleton";
 
 const queryClient = new QueryClient();
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <AuthProvider>
-      <Navbar isOpen={isOpen} setIsOpen={setIsOpen} />
-      <QueryClientProvider client={queryClient}>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/recovery" element={<RecoveryPassword />} />
-          <Route
-            path="/account"
-            element={
-              <ProtectedRoute>
-                <Account />
-              </ProtectedRoute>
-            }
-          />
-          <Route
-            path="/account/update"
-            element={
-              <ProtectedRoute>
-                <UpdateUserInfo />
-              </ProtectedRoute>
-            }
-          />
-          <Route
-            path="/account/mentorships/:mentorship"
-            element={
-              <ProtectedRoute>
-                <AccountMentorships />
-              </ProtectedRoute>
-            }
-          />
-          <Route
-            path="/becomementor"
-            element={
-              <ProtectedRoute>
-                <BecomeMentor />
-              </ProtectedRoute>
-            }
-          />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/logout" element={<Logout />} />
-          <Route path="/mentor/:mentorId" element={<Mentor />} />
-          <Route path="*" element={<Navigate to={"/"} replace />} />
-        </Routes>
-      </QueryClientProvider>
-    </AuthProvider>
+    <SkeletonTheme baseColor="#03112a" highlightColor="#04182d">
+      <AuthProvider>
+        <Navbar isOpen={isOpen} setIsOpen={setIsOpen} />
+        <QueryClientProvider client={queryClient}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/recovery" element={<RecoveryPassword />} />
+            <Route
+              path="/account"
+              element={
+                <ProtectedRoute>
+                  <Account />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/account/update"
+              element={
+                <ProtectedRoute>
+                  <UpdateUserInfo />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/account/mentorships/:mentorship"
+              element={
+                <ProtectedRoute>
+                  <AccountMentorships />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/becomementor"
+              element={
+                <ProtectedRoute>
+                  <BecomeMentor />
+                </ProtectedRoute>
+              }
+            />
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/logout" element={<Logout />} />
+            <Route path="/mentor/:mentorId" element={<Mentor />} />
+            <Route path="*" element={<Navigate to={"/"} replace />} />
+          </Routes>
+        </QueryClientProvider>
+      </AuthProvider>
+    </SkeletonTheme>
   );
 }
 

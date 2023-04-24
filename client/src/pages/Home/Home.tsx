@@ -1,6 +1,7 @@
 import { useQuery } from "react-query";
 import useApi from "../../hooks/useApi";
 import Mentor from "../../components/Mentor/Mentor";
+
 export type MentorType = {
   id: number;
   status: string;
@@ -34,7 +35,7 @@ export type MentorType = {
 const Home = () => {
   const fetchData = useApi<MentorType[]>();
 
-  const { data } = useQuery({
+  const { data, isLoading } = useQuery({
     queryKey: ["mentors", 1],
     queryFn: async () =>
       await fetchData("/api/mentor/mentors", "get", false, {
@@ -43,10 +44,10 @@ const Home = () => {
         },
       }),
   });
-  console.log(data);
+
   return (
     <>
-      <Mentor data={data} />
+      <Mentor data={data} isLoading={isLoading} />
     </>
   );
 };
