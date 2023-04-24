@@ -10,9 +10,10 @@ interface ChangePersonalInfoProps {
   header: string;
   children: ReactNode;
   onSubmit: (FormData: FormData) => void;
+  isUpdating: boolean;
 }
 
-const ChangeInfoForm = ({ children, onSubmit, header }: ChangePersonalInfoProps) => {
+const ChangeInfoForm = ({ children, onSubmit, header, isUpdating }: ChangePersonalInfoProps) => {
   const schema: ZodType<FormData> = z
     .object({
       firstname: z.string(),
@@ -101,7 +102,12 @@ const ChangeInfoForm = ({ children, onSubmit, header }: ChangePersonalInfoProps)
           <FormError<FormData> errors={errors} errorKey={"about"} />
         </div>
         {children}
-        <input type="submit" className={styles.formSubmit} value={"Update"} />
+        <input
+          type="submit"
+          className={styles.formSubmit}
+          disabled={isUpdating}
+          value={isUpdating ? "Updating..." : "Update"}
+        />
       </form>
     </div>
   );

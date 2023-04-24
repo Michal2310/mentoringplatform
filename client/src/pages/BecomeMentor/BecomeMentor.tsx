@@ -17,6 +17,8 @@ const BecomeMentor = () => {
     setCheckedCountry,
     setCheckedLanguages,
     setCheckedSkills,
+    isUpdating,
+    setIsUpdating,
   } = useAccountUpdate();
 
   const { mutateAsync: becomeMentorAsync } = useMutation({
@@ -36,13 +38,15 @@ const BecomeMentor = () => {
   });
 
   const onBecomeMentor = async (FormData: FormData) => {
+    setIsUpdating(true);
     await becomeMentorAsync(FormData);
     await onSubmit(FormData);
+    setIsUpdating(false);
   };
 
   return (
     <>
-      <ChangeInfoForm onSubmit={onBecomeMentor} header="Become mentor">
+      <ChangeInfoForm isUpdating={isUpdating} onSubmit={onBecomeMentor} header="Become mentor">
         <DropdownMenu<Skill, Record<string, boolean>>
           itemKey={"skill"}
           dataArray={skills}

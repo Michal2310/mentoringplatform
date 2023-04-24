@@ -15,22 +15,21 @@ const Account = () => {
   return (
     <>
       <UserInfo />
-      {mentorshipsAvailable && (
-        <>
-          <UserMentorships
-            data={receivedMentorships}
-            header={"Mentorship requests"}
-            showMoreParam="receivedRequests"
-            showButtons
-          />
-          <UserMentorships
-            data={myMentorships}
-            header={"My Mentorship requests"}
-            showMoreParam="myrequests"
-            showButtons={false}
-          />
-        </>
-      )}
+
+      <>
+        <UserMentorships
+          data={receivedMentorships}
+          header={"Mentorship requests"}
+          showMoreParam="receivedRequests"
+          showButtons
+        />
+        <UserMentorships
+          data={myMentorships}
+          header={"My Mentorship requests"}
+          showMoreParam="myrequests"
+          showButtons={false}
+        />
+      </>
     </>
   );
 };
