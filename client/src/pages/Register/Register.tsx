@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 import styles from "./Register.module.css";
@@ -20,6 +21,7 @@ interface RegisterResponse {
 const Register = () => {
   const navigation = useNavigate();
   const fetchData = useApi<RegisterResponse>();
+  const [isUserBeingRegistered, setIsUserBeingRegistered] = useState<boolean>();
   const schema: ZodType<FormData> = z
     .object({
       email: z.string().email(),
@@ -60,6 +62,7 @@ const Register = () => {
   });
 
   const onSubmit = async (formData: FormData) => {
+    setIsUserBeingRegistered(true);
     await mutateAsync(formData).then((result) => {
       if (!!result.tokens) {
         setError("email", {
@@ -69,6 +72,7 @@ const Register = () => {
         navigation("/login");
       }
     });
+    setIsUserBeingRegistered(false);
   };
 
   return (
@@ -126,7 +130,12 @@ const Register = () => {
               />
               <FormError<FormData> errors={errors} errorKey={"confirmPassword"} />
             </div>
-            <input className={styles.registerFormSubmit} type="submit" value={"Register now"} />
+            <input
+              className={styles.registerFormSubmit}
+              type="submit"
+              disabled={isUserBeingRegistered}
+              value={isUserBeingRegistered ? "Signing up..." : "Register now"}
+            />
           </form>
         </div>
         <div className={styles.loginBox}>

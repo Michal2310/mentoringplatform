@@ -43,6 +43,10 @@
   margin-top: 2rem;
   cursor: pointer;
 }
+.loginFormSubmit:disabled {
+  background-color: #010b17;
+  cursor: not-allowed;
+}
 .loginRegisterBox {
   display: flex;
   align-items: center;

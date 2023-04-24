@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { useNavigate } from "react-router";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
@@ -23,6 +23,7 @@ const Login = () => {
   const { setUser, setToken } = useContext(AuthContext);
   const fetchData = useApi<LoginResponse>();
   const navigation = useNavigate();
+  const [isLoggingIn, setIsLoggingIn] = useState<boolean>(false);
 
   const schema: ZodType<FormData> = z
     .object({
@@ -55,6 +56,7 @@ const Login = () => {
   });
 
   const onSubmit = async (formData: FormData) => {
+    setIsLoggingIn(true);
     await mutateAsync(formData).then((result) => {
       if (!result.tokens || !result.user) {
         setError("email", {
@@ -69,6 +71,7 @@ const Login = () => {
         navigation("/");
       }
     });
+    setIsLoggingIn(false);
   };
 
   return (
@@ -119,7 +122,12 @@ const Login = () => {
                 Recovery password
               </Link>
             </div>
-            <input className={styles.loginFormSubmit} type="submit" value={"Login"} />
+            <input
+              className={styles.loginFormSubmit}
+              type="submit"
+              disabled={isLoggingIn}
+              value={isLoggingIn ? "Logging in..." : "Login"}
+            />
           </form>
         </div>
         <div className={styles.login__submit}>
